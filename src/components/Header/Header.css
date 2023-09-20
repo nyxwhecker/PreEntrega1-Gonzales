@@ -1,0 +1,24 @@
+
+.Header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(150, 99, 73);
+    width: 100%;
+    min-height: 30vh;
+    border: 10px solid rgb(43, 27, 12);
+}
+
+.Header h1 {
+    color: rgb(62, 27, 27);
+    font-size: 45px;
+    text-align: center;
+    margin: 0; 
+    padding: 10px;
+}
+
+.logo {
+    width: 200px;
+    height: 170px;
+    margin-right: 20px; 
+}
