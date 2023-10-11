@@ -1,24 +1,27 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { useParams } from "react-router-dom";
-
-import CardDrinks from "../../CardDrinks/CardDrinks";
+import CardMenu from "../../CardMenu/CardMenu";
+import data from "../CategoryPage/Data.json";
 
 const ItemDetailContainer = () => {
-    let { id } = useParams();
-  const [char, setChars] = useState([]);
+  const { id } = useParams();
+  const [products, setProducts] = useState(null); 
 
   useEffect(() => {
-    axios(`https://api.sampleapis.com/coffee/hot/${id}`).then((res) => 
-     setChars(res.data)
-     );
+   
+    console.log("ID from URL:", id);
+    const selectedProduct = data.find((item) => item.id === id);
+
+    if (selectedProduct) {
+      setProducts(selectedProduct);
+    }
   }, [id]);
 
-    return (
-        <div style={{ display: "flex", justifyContent: "center", margin: 20 }}>
-        {char.id ? <CardDrinks char={char} /> : null}
-        </div>
-    )
-  }
-  
-  export default ItemDetailContainer
+  return (
+    <div style={{ display: "flex", justifyContent: "center", margin: 20 }}>
+      {products ? <CardMenu char={products} /> : null}
+    </div>
+  );
+};
+
+export default ItemDetailContainer;
