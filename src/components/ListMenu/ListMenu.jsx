@@ -29,11 +29,10 @@ const ListMenu = () => {
   return (
     <div className="Cards-List">
       {products.map((product) => {
-        return <CardMenu product={product} key={product.id}/>;
+        return <CardMenu product={product} key={product.id} />;
       })}
     </div>
   );
 };
 
 export default ListMenu;
-

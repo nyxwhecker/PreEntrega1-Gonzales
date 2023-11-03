@@ -14,12 +14,11 @@ const ItemDetailContainer = () => {
   const { id } = useParams();
 
   useEffect(() => {
-   
     const getProduct = async () => {
-      const productRef = doc(db, "Products", id); 
-      const productDoc = await getDoc(productRef); 
+      const productRef = doc(db, "Products", id);
+      const productDoc = await getDoc(productRef);
       if (productDoc.exists()) {
-        setProductData({ ...productDoc.data(), id: productDoc.id }); 
+        setProductData({ ...productDoc.data(), id: productDoc.id });
       } else {
         console.log("El documento no existe.");
       }
@@ -31,10 +30,7 @@ const ItemDetailContainer = () => {
     <div style={{ display: "flex", justifyContent: "center", margin: 20 }}>
       {productData ? <CardMenu product={productData} /> : null}
     </div>
-    
   );
 };
 
 export default ItemDetailContainer;
-
-

@@ -10,7 +10,7 @@ const Reservation = () => {
     fecha: "",
     hora: "",
     numero: "",
-    tipoDeReserva: "cumpleanos", 
+    tipoDeReserva: "cumpleanos",
   });
 
   const handleChange = (event) => {
@@ -22,7 +22,7 @@ const Reservation = () => {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
     console.log("Datos del formulario:", formData);
   };
 
@@ -114,7 +114,5 @@ const Reservation = () => {
     </div>
   );
 };
-
-
 
 export default Reservation;

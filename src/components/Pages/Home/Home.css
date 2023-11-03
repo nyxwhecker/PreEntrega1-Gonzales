@@ -1,24 +1,23 @@
 .UserSection {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: space-evenly;
-    justify-items: center;
-  }
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  justify-items: center;
+}
 
-.welcome{
+.welcome {
   display: flex;
   margin-top: 20px;
   margin-bottom: 40px;
   width: 250px;
   height: 250px;
   margin-left: 425px;
-  
 }
 
-.presentacion{
+.presentacion {
   text-align: center;
   background-color: rgb(60, 46, 46);
-  color:rgb(129, 96, 80);
+  color: rgb(129, 96, 80);
   margin-top: px;
 }

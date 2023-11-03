@@ -9,19 +9,16 @@ const Shop = () => {
 
   const calculateTotal = () => {
     if (cart.length === 0) {
-      return 0; 
+      return 0;
     }
-  
+
     const total = cart.reduce((acc, product) => {
       const productTotal = product.quantity * product.price;
       return acc + productTotal;
-      
     }, 0);
 
-    return total ;
-  
+    return total;
   };
-
 
   return (
     <div>
@@ -43,9 +40,9 @@ const Shop = () => {
             <span>Total: ${calculateTotal()}</span>
           </div>
           <Link to="/checkout">
-          <button type="submit" className="Button">
-            Checkout
-          </button>
+            <button type="submit" className="Button">
+              Checkout
+            </button>
           </Link>
         </form>
       </div>

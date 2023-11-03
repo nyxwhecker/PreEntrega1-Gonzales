@@ -1,35 +1,34 @@
-
 .Header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(150, 99, 73);
-    width: 100%;
-    min-height: 30vh;
-    border-bottom: 12px solid #381d0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(150, 99, 73);
+  width: 100%;
+  min-height: 30vh;
+  border-bottom: 12px solid #381d0e;
 }
 
 .Header h1 {
-   
-    font-family: "Times New Roman", Times, serif;
-    font-size: 50px;
-    letter-spacing: 2px;
-    word-spacing: -3.8px;
-    color: #441A1A;
-    font-weight: 700;
-    text-decoration: none solid rgb(68, 68, 68);
-    font-style: italic;
-    font-variant: normal;
-    text-transform: capitalize;
-    text-align: center;
-    font-weight: bold;
-    color: #3d0d0d;
-    text-shadow: 0 0 5px #f0b1a9, 0 0 10px #f7c0c0, 0 0 15px #eaa6a6, 0 0 20px#561f0c, 0 0 30px #561f0c, 0 0 40px #561f0c, 0 0 55px #561f0c, 0 0 75px #561f0c;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  letter-spacing: 2px;
+  word-spacing: -3.8px;
+  color: #441a1a;
+  font-weight: 700;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: italic;
+  font-variant: normal;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: bold;
+  color: #3d0d0d;
+  text-shadow: 0 0 5px #f0b1a9, 0 0 10px #f7c0c0, 0 0 15px #eaa6a6,
+    0 0 20px#561f0c, 0 0 30px #561f0c, 0 0 40px #561f0c, 0 0 55px #561f0c,
+    0 0 75px #561f0c;
 }
 
 .logo {
-    width: 200px;
-    height: 170px;
-    margin-right: 20px; 
+  width: 200px;
+  height: 170px;
+  margin-right: 20px;
 }
-

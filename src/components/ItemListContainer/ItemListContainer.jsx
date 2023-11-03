@@ -1,14 +1,13 @@
-import React from 'react'
-import "./ItemListContainer.css"
-import ListMenu from "../ListMenu/ListMenu"
+import React from "react";
+import "./ItemListContainer.css";
+import ListMenu from "../ListMenu/ListMenu";
 
 const ItemListContainer = () => {
   return (
     <div>
-      <ListMenu/>
+      <ListMenu />
     </div>
-  )
-}
+  );
+};
 
-export default ItemListContainer
-
+export default ItemListContainer;

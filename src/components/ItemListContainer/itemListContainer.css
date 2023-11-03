@@ -1,9 +1,9 @@
 .itemListContainer {
-   background-color: rgb(116, 62, 62);
-   padding: 20px;
-   text-align: center;
-   font-size: 24px;
-   color: rgba(68, 39, 51, 0.998);
-   height: "50px";
-   width: "100%";
+  background-color: rgb(116, 62, 62);
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  color: rgba(68, 39, 51, 0.998);
+  height: "50px";
+  width: "100%";
 }

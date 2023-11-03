@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
 const CardMenu = ({ product }) => {
-
   return (
     <Card sx={{ maxWidth: 345 }} className="card-menu-image">
       <CardActionArea>
@@ -27,7 +26,7 @@ const CardMenu = ({ product }) => {
             {product.name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {"$"+product.price}
+            {"$" + product.price}
           </Typography>
 
           <ItemDetail
@@ -46,4 +45,3 @@ const CardMenu = ({ product }) => {
 };
 
 export default CardMenu;
-

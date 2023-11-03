@@ -3,9 +3,9 @@ import ListMenu from "../../ListMenu/ListMenu";
 const Menu = () => {
   return (
     <div>
-       <ListMenu/>
+      <ListMenu />
     </div>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;

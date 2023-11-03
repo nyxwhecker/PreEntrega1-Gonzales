@@ -3,7 +3,7 @@ import { CartContext } from "../../context/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({ name, price, image }) => {
-  const [ quantityAdded, setQuantityAdded] = useState(0);
+  const [quantityAdded, setQuantityAdded] = useState(0);
 
   const { addItem } = useContext(CartContext);
 
@@ -14,11 +14,10 @@ const ItemDetail = ({ name, price, image }) => {
       name,
       price,
       image,
-      quantity
+      quantity,
     };
 
     addItem(item, quantity);
-
   };
 
   return (

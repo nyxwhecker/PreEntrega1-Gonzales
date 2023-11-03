@@ -20,7 +20,6 @@ import Cart from "./components/Cart/Cart";
 import Checkout from "./components/Pages/Checkout/Checkout";
 import Shop from "./components/Shop/Shop";
 
-
 const App = () => {
   return (
     <div>
@@ -39,16 +38,14 @@ const App = () => {
               <Route path="/Menu" element={<Menu />} />
               <Route path="/Reservation" element={<Reservation />} />
               <Route path="/about" element={<About />} />
-              <Route path="/cart" element={ <Cart/>}/>
-              <Route path="/checkout" element={<Checkout/>}/>
-              <Route path="/shop" element= {<Shop/>} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/shop" element={<Shop />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </CartProvider>
         </div>
       </Router>
-
-      
     </div>
   );
 };

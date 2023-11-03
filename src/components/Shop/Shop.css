@@ -1,52 +1,51 @@
-.titleCheckout{
-    color: rgb(62, 27, 27);
-    font-size: 30px;
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 70px;
-    margin: 0; 
-    padding: 10px;
-    font-size: 50px;
-    margin-top: 25px;
-    margin-bottom: 30px;
+.titleCheckout {
+  color: rgb(62, 27, 27);
+  font-size: 30px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 70px;
+  margin: 0;
+  padding: 10px;
+  font-size: 50px;
+  margin-top: 25px;
+  margin-bottom: 30px;
 }
 
-
 .container {
-    background-color: #927160;
-    border-radius: 10px;
-    padding: 40px;
-    width: 300px;
-    margin: 0 auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 25px;
-    
+  background-color: #927160;
+  border-radius: 10px;
+  padding: 40px;
+  width: 300px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 25px;
 }
 
 .form-group {
-    margin-bottom: 15px;
-    font-size: 25px;
-    color: rgb(49, 30, 24);
+  margin-bottom: 15px;
+  font-size: 25px;
+  color: rgb(49, 30, 24);
 }
 
 .form-group label {
-    display: block;
-    font-size: 25px;
+  display: block;
+  font-size: 25px;
 }
 
-.form-group select, .form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .total {
-    text-align: center;
-    font-size: 18px;
-    margin-top: 10px;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
 }
 
-.Button{
-    text-align: center;
+.Button {
+  text-align: center;
 }
