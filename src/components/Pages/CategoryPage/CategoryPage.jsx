@@ -1,26 +1,43 @@
 import React, { useEffect, useState } from "react";
 import CardMenu from "../../CardMenu/CardMenu";
+import "./categoryPage.css";
 import { useParams } from "react-router-dom";
-import data from "../CategoryPage/Data.json";
+import { db } from "../../../firebase/firebaseConfig";
+import { collection, query, getDocs, where } from "firebase/firestore";
 
 const CategoryPage = () => {
   const [products, setProducts] = useState([]);
-  let { categoryId } = useParams();
-  //console.log("category from URL:", categoryId);
+  const { categoryId } = useParams();
 
   useEffect(() => {
-    const filteredProducts = data.filter((product) => product.category === categoryId);
-    setProducts(filteredProducts);
+    const fetchProducts = async () => {
+      const q = query(
+        collection(db, "Products"),
+        where("category", "==", categoryId)
+      );
 
+      const docs = [];
+      const querySnapshot = await getDocs(q);
+
+      querySnapshot.forEach((doc) => {
+        docs.push({ ...doc.data(), id: doc.id});
+      });
+
+      setProducts(docs);
+    };
+
+    fetchProducts();
   }, [categoryId]);
 
   return (
-    <div className="Cards-List">
-      {products.map((product) => (
-      <div style={{ margin: 10 }} key={product.id}>
-        <CardMenu char={product} />
+    <div>
+      <div className="Cards-List">
+        {products.map((product) => (
+          <div style={{ margin: 10 }} key={product.id}>
+            <CardMenu product={product} />
+          </div>
+        ))}
       </div>
-    ))}
     </div>
   );
 };

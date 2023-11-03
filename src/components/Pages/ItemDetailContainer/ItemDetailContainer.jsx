@@ -1,27 +1,40 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import "./ItemDetailContainer.css";
+
+// FIREBASE
+import { db } from "../../../firebase/firebaseConfig";
+import { getDoc, doc } from "firebase/firestore";
+
+// Components
 import CardMenu from "../../CardMenu/CardMenu";
-import data from "../CategoryPage/Data.json";
 
 const ItemDetailContainer = () => {
+  const [productData, setProductData] = useState(null);
   const { id } = useParams();
-  const [products, setProducts] = useState(null); 
 
   useEffect(() => {
    
-    console.log("ID from URL:", id);
-    const selectedProduct = data.find((item) => item.id === id);
-
-    if (selectedProduct) {
-      setProducts(selectedProduct);
-    }
+    const getProduct = async () => {
+      const productRef = doc(db, "Products", id); 
+      const productDoc = await getDoc(productRef); 
+      if (productDoc.exists()) {
+        setProductData({ ...productDoc.data(), id: productDoc.id }); 
+      } else {
+        console.log("El documento no existe.");
+      }
+    };
+    getProduct();
   }, [id]);
 
   return (
     <div style={{ display: "flex", justifyContent: "center", margin: 20 }}>
-      {products ? <CardMenu char={products} /> : null}
+      {productData ? <CardMenu product={productData} /> : null}
     </div>
+    
   );
 };
 
 export default ItemDetailContainer;
+
+

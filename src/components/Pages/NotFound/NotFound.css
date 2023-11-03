@@ -1,0 +1,10 @@
+.NotFound{
+    text-align: center;
+    color: rgb(62, 27, 27);
+    font-size: 30px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    margin: 0; 
+    padding: 10px;
+}

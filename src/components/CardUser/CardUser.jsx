@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
-const CardUser = ({ img, name, description, date}) => {
+const CardUser = ({ img,name, date, description}) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
@@ -15,9 +15,15 @@ const CardUser = ({ img, name, description, date}) => {
           alt="green iguana"
         />
         <CardContent>
-          <Typography variant="body2" color="text.secondary">
-            {description}
-          </Typography>
+        <Typography variant="body2" color="text.secondary">
+         {name}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+        {description}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+        {date}
+        </Typography>
         </CardContent>
       </CardActionArea>
     </Card>

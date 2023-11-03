@@ -1,38 +1,39 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./ListMenu.css";
 import CardMenu from "../CardMenu/CardMenu";
-import { Link } from "react-router-dom";
-import data from "../Pages/CategoryPage/Data.json";
+// DB Firestore
+import { db } from "../../firebase/firebaseConfig";
+// Firestore
+import { collection, query, getDocs } from "firebase/firestore";
 import { useParams } from "react-router-dom";
+import React from "react";
 
 const ListMenu = () => {
-  const [chars, setChars] = useState(data);
+  const [products, setProducts] = useState([]);
   const { id } = useParams();
+  const selectedProduct = products.find((product) => product.id === id);
 
-  const selectedChar = chars.find((char) => char.id === id);
-
-  if (selectedChar) {
-    setChars(selectedChar);
-  }
+  useEffect(() => {
+    const getProducts = async () => {
+      const q = query(collection(db, "Products"));
+      const docs = [];
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((doc) => {
+        docs.push({ ...doc.data(), id: doc.id });
+      });
+      setProducts(docs);
+    };
+    getProducts();
+  }, []);
 
   return (
     <div className="Cards-List">
-      {selectedChar ? ( 
-        <div key={selectedChar.id}>
-          <CardMenu char={selectedChar} />
-        </div>
-      ) : (
-       
-        chars.map((char) => (
-          <div key={char.id}>
-            <Link to={`/item/${char.id}`}>
-              <CardMenu char={char} />
-            </Link>
-          </div>
-        ))
-      )}
+      {products.map((product) => {
+        return <CardMenu product={product} key={product.id}/>;
+      })}
     </div>
   );
 };
 
 export default ListMenu;
+

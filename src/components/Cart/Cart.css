@@ -1,0 +1,18 @@
+.containerButtonCart{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.containerCart{
+    text-align: center;
+}
+.notItems{
+    text-align: center;
+    color: rgb(62, 27, 27);
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    margin: 0; 
+    padding: 10px;
+}
