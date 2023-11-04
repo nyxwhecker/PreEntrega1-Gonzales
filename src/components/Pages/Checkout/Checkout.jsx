@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Checkout.css";
 import MessageSuccess from "../../MessageSuccess/MessageSuccess";
 import TextField from "@mui/material/TextField";
 // Firebase
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../../firebase/firebaseConfig";
+import { CartContext } from "../../../context/CartContext";
 
 const initialState = {
   name: "",
@@ -15,6 +16,7 @@ const initialState = {
 const Checkout = () => {
   const [values, setValues] = useState(initialState);
   const [purchaseID, setPurchaseID] = useState("");
+  const { clearCart } = useContext(CartContext);
 
   const handleOnChange = (e) => {
     const { value, name } = e.target;
@@ -66,7 +68,7 @@ const Checkout = () => {
           onChange={handleOnChange}
           required
         />
-        <button className="Button">Send</button>
+        <button onClick={clearCart} className="Button">Send</button>
       </form>
       {purchaseID && <MessageSuccess purchaseID={purchaseID} />}
     </div>
